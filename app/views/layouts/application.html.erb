@@ -22,11 +22,18 @@
         <h3 class="text-muted">Book Store</h3>
       </div>
 
+      <% if alert.present? %>
+        <div class="alert alert-danger">
+          <%= alert %>
+        </div>
+      <% end %>
+
       <% if notice.present? %>
-        <div class="alert alert-notice">
+        <div class="alert alert-info">
           <%= notice %>
         </div>
       <% end %>
+
       <%= yield %>
     </div>
   </body>

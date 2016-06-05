@@ -1,0 +1,36 @@
+<div class="btn-wrapp">
+    <%= link_to 'Add new book', new_author_book_path(@author), :class => "btn btn-primary" %>
+</div>
+<h3>Books of <%= @author.name %></h3>
+
+<% if @books.empty? %>
+    <div class="alert alert-warning">
+        No books found.
+    </div>
+<% else %>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @books.each do |book| %>
+                <tr>
+                    <td><%= book.title %></td>
+                    <td><%= book.description %></td>
+                    <td><%= link_to 'Edit', edit_author_book_path(@author, book) %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% end %>
+
+<div class="form_item control-group clearfix">
+    <div class="pull-left link_item">
+        <%= link_to 'Back', authors_path, :class => "btn btn-primary" %>
+    </div>
+</div>
