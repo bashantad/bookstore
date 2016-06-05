@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.form_item{
+  padding:5px
+}
+.error{
+  color:red;
+}
+.data_item{
+  padding:10px;
+  border-bottom:1px solid #ccc;
+}
+.link_item{
+  padding-right:10px;
+}

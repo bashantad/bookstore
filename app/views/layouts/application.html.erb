@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+    <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation">
+              <%= link_to "Home", authors_path  %>
+            </li>
+            <li role="presentation">
+              <%= link_to "Add new author",new_author_path  %>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Book Store</h3>
+      </div>
 
-<%= yield %>
-
-</body>
+      <% if notice.present? %>
+        <div class="alert alert-notice">
+          <%= notice %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
 </html>

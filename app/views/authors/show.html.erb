@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="data_item">
+            <strong>Name:</strong>
+            <%= @author.name %>
+        </div>
+
+        <div class="data_item">
+            <strong>Email:</strong>
+            <%= @author.email %>
+        </div>
+
+        <div class="data_item">
+            <strong>Phone:</strong>
+            <%= @author.phone %>
+        </div>
+
+        <div class="data_item">
+            <strong>Country:</strong>
+            <%= @author.country %>
+        </div>
+
+        <div class="form_item control-group clearfix">
+            <div class="pull-left link_item">
+                <%= link_to 'Edit', edit_author_path(@author), :class => "btn btn-info" %>
+            </div>
+
+            <div class="pull-left link_item">
+                <%= link_to 'Back', authors_path, :class => "btn btn-primary" %>
+            </div>
+        </div>
+    </div>
+</div>
